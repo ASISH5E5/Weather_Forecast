@@ -97,7 +97,7 @@ const Weather = () => {
                         <div className='location'>{weatherData ? weatherData.name : 'Location'}</div>
 
                         <div className='date-time'>
-                           
+                           <p>Date and Time</p>
                             <span style={{ fontWeight: 'bold', color: 'black' }}>
                                 {weatherData ? formatDate(weatherData.dt) : 'Unknown'}
                             </span>
