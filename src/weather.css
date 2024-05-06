@@ -5,7 +5,7 @@
     background-repeat:none;
     background-size:cover;
     width:100%;
-    margin-top:10px auto;
+    margin-top:0px auto;
     height:800px;
     
 }
@@ -19,8 +19,8 @@ p{
     max-width: 300px;
     min-height: 450px;
     height: auto;
+    padding:70px;
     
-    margin-top:300px;
     border: 1px solid #ccc;
   
     border-radius: 10px;
