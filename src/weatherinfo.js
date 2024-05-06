@@ -73,7 +73,7 @@ const Weather = () => {
 
     return (
         <div>
-        <div className='page'>
+        
             <center>
                 <div className='main'>
                     <h1>Weather Info</h1>
@@ -121,7 +121,7 @@ const Weather = () => {
                 </div>
             </center>
         </div>
-                                        </div>
+                                        
     )
 }
 
