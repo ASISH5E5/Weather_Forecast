@@ -36,7 +36,9 @@ const Weather = () => {
     };
 
     const renderWeatherIcon = () => {
+        // Check if weatherData is not available or if it doesn't contain weather information
         if (!weatherData || !weatherData.weather || weatherData.weather.length === 0) {
+            // Return the cloudy icon by default
             return <img src={cloud_icon} alt="Cloudy" className='iconimg' />;
         }
 
@@ -48,6 +50,7 @@ const Weather = () => {
         } else if (weatherCode >= 800 && weatherCode < 900) {
             return <img src={sun_icon} alt="Sunny" className='iconimg' />;
         } else {
+            // Default icon when weather code doesn't match any specified ranges
             return <img src={cloud_icon} alt="Normal" className='iconimg' />;
         }
     };
@@ -69,7 +72,8 @@ const Weather = () => {
     };
 
     return (
-        <div className='page'>
+        <div>
+        
             <center>
                 <div className='main'>
                     <h1>Weather Info</h1>
@@ -86,14 +90,14 @@ const Weather = () => {
                             <p>
                                 {weatherData ? Math.round(weatherData.main.temp) : '0'}
                                 <sup>o</sup>
-                                <span style={{ fontSize: '20px' }}>Celsius</span>.
+                                <span style={{ fontSize: '20px' }}>Celsius.</span>
                             </p>
                         </div>
 
                         <div className='location'>{weatherData ? weatherData.name : 'Location'}</div>
 
                         <div className='date-time'>
-                            <span style={{ color: 'gray', fontSize: '17px', margin: '10px' }}>Date & Time (IST)</span><br />
+                           
                             <span style={{ fontWeight: 'bold', color: 'black' }}>
                                 {weatherData ? formatDate(weatherData.dt) : 'Unknown'}
                             </span>
@@ -113,10 +117,12 @@ const Weather = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </center>
         </div>
-    );
-};
+                                        
+    )
+}
 
 export default Weather;
