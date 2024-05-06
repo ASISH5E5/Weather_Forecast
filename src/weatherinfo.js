@@ -72,6 +72,7 @@ const Weather = () => {
     };
 
     return (
+        <div>
         <div className='page'>
             <center>
                 <div className='main'>
@@ -120,6 +121,7 @@ const Weather = () => {
                 </div>
             </center>
         </div>
+                                        </div>
     )
 }
 
